@@ -3,14 +3,11 @@ public class Solution {
     // Start typing your Java solution below
     // DO NOT write main() function
 
-    int len = s.length();
     int count = 0;
-
-    if(len == 0) return 0;
 
     int start = -1;
 
-    for(int i = len - 1; i > -1; i--)
+    for(int i = s.length() - 1; i > -1; i--)
     {
       if(s.charAt(i) != ' ')
       {
