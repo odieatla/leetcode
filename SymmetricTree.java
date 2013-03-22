@@ -1,4 +1,4 @@
-/*read left subtree and right subtree repectively, and compare the result, left = right.reverse, then is symmetric tree.*/
+/*read left subtree and right subtree in order repectively, and compare the result, left = right.reverse, then is symmetric tree.*/
 
 public class Solution {
     public boolean isSymmetric(TreeNode root) {
