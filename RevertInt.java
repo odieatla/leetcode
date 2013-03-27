@@ -16,12 +16,12 @@ public class Solution {
 
         int y = x * flag;
 
-        do {
+        while(y > 0)
+        {
             out = out * 10 + y%10;
 
             y = y/10;
         }
-        while(y > 0);
 
         return out * flag;
     }
