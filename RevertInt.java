@@ -23,6 +23,11 @@ public class Solution {
             y = y/10;
         }
 
+        if(out < 0) //overflow -- the reverse of 1000000003 overflow-32bits
+        {
+          return -1;
+        }
+
         return out * flag;
     }
 }
