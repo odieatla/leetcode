@@ -15,7 +15,7 @@ public class Solution {
         {
           for(int j = 1; j < strs.length; j++)
           {
-            if(i == strs[j].length())
+            if(i == strs[j].length()) //length check MUST be first. Otherwise may run time error.
             {
               return strs[0].substring(0, i);
             }
