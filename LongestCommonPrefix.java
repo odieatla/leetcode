@@ -6,11 +6,12 @@ public class Solution {
         {
             return "";
         }
+/*
         if(strs.length == 1)
         {
           return strs[0];
         }
-        
+*/         
         for(int i = 0; i < strs[0].length(); i++)
         {
           for(int j = 1; j < strs.length; j++)
