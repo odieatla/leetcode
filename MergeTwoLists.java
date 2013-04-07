@@ -33,7 +33,7 @@ public class Solution {
             }
             cur = cur.next;
         }
-
+/*
         if(l1 == null) //l1 is all in the final list, or l1 is always null
         {
             cur.next = l2;
@@ -41,6 +41,16 @@ public class Solution {
         if(l2 == null) //l2 is all in the final list, or l2 is always null
         {
             cur.next = l1;
+        }
+*/
+
+        if(l1 != null) //l2 is all in the list, or l2 is null
+        {
+            cur.next = l1;
+        }
+        else //l1 is null, or l1 is all in the list
+        {
+            cur.next = l2;
         }
 
         return curhead.next;
