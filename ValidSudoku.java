@@ -1,61 +1,55 @@
-public class Solution {
+c class Solution {
     public boolean isValidSudoku(char[][] board) {
         // Start typing your Java solution below
         // DO NOT write main() function
-        ArraySet<Character> box_result = new ArraySet<Character>();
-        ArraySet<Character> row = new ArraySet<Character>();
-        ArraySet<Character> column = new ArraySet<Character>();
+        HashSet[] boxes = new HashSet[9];
+        HashSet[] rows = new HashSet[9];
+        HashSet[] columns = new HashSet[9];
         
-        for(int c = 0; c < 9; c++)
+        for(int r = 0; r < 9; r++)
         {
-            for(int r = 0; r < 9; r++)
-          {
+            for(int c = 0; c < 9; c++)
+            {
             char item = board[r][c];
             
-            if(item == '.')
+            int b = (c / 3 ) + (3 * (r/3));
+            
+            if(item != '.')
             {
               continue;
             }
-          
-            if(r%3 == 0 && c%3 == 0)
-          {
-      
-          for(int i = c; i - c < 3; i++)
-          {
-            for(int j = r; j - r < 3; j++)
-            {
-              if(box_result.contains(board[j][i]))
-              {
-                return false;
-              }
-              else
-              {
-                box_result.add(board[j][i]);
-              }
-            }
-          }
-        }
-
-        if(row.contains(item))
+        
+        if(boxes[b].contains(item))
         {
           return false;
         }
         else
         {
-          row.add(item);
+          boxes[b].add(item);
         }
         
-        if(column.contains(item))
+        if(rows[r].contains(item))
         {
           return false;
         }
         else
         {
-          column.add(item);
+          rows[r].add(item);
+        }
+
+        if(columns[c].contains(item))
+        {
+          return false;
+        }
+        else
+        {
+          columns[c].add(item);
+        }
+          }
+            
+            
         }
         
         return true;
-          }
-        }
     }
-}
+}}
