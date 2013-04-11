@@ -5,6 +5,22 @@ c class Solution {
         HashSet[] boxes = new HashSet[9];
         HashSet[] rows = new HashSet[9];
         HashSet[] columns = new HashSet[9];
+
+        /*Initial for each object.*/
+        for(int i = 0; i < boxes.length; i++)
+        {
+            boxes[i] = new HashSet();
+        }
+
+        for(int i = 0; i < rows.length; i++)
+        {
+          rows[i] = new HashSet();
+        }
+
+        for(int i = 0; i < columns.length; i++)
+        {
+          columns[i] = new HashSet();
+        }
         
         for(int r = 0; r < 9; r++)
         {
