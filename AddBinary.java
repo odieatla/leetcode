@@ -6,8 +6,8 @@ public class Solution {
         int bl = b.length();
         
         int minlen = (al > bl) ? bl : al;
-      String c = (al > bl) ? a : b;
-    int cl = c.length();
+        String c = (al > bl) ? a : b;
+        int cl = c.length();
 
         int carry = 0;
         
@@ -19,7 +19,11 @@ public class Solution {
           int bb = b.charAt(bl - 1 - i) - '0';
           
           int rr = aa + bb + carry;
-          
+
+          carry = rr/2;
+          out = Integer.toString(rr%2) + out;
+
+          /*
           if(rr > 1)
           {
             carry = 1;
@@ -39,22 +43,27 @@ public class Solution {
             
             out = Integer.toString(rr) + out;
           }
+          */
         }
         
         for(int i = minlen; i < cl; i++)
         {
-          int cc = c.charAt(cl - 1 - i) - '0';
-          
+          int cc = c.charAt(cl - 1 - i) - '0' + carry;
+
+          carry = cc/2;
+          out = Integer.toString(cc%2) + out;
+          /*
           if(cc + carry > 1)
           {
-            carry = 1;
-            out = "0" + out;
+              carry = 1;
+              out = "0" + out;
           }
           else
           {
-            out = Integer.toString(cc + carry) + out;
-                carry = 0;
+              out = Integer.toString(cc + carry) + out;
+              carry = 0;
           }
+          */
         }
         
         if(carry == 1)
