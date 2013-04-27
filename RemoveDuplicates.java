@@ -2,7 +2,7 @@ public class Solution {
     public int removeDuplicates(int[] A) {
         // Start typing your Java solution below
         // DO NOT write main() function
-        if(A.length == 0) return 0;
+        //if(A.length == 0) return 0;
 
         int before = 0;
         int after = 1;
@@ -20,6 +20,6 @@ public class Solution {
           after ++;
         }
 
-        return before + 1;
+        return (A.length == 0 ? 0 : before + 1);
     }
 }
