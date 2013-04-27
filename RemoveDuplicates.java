@@ -21,9 +21,5 @@ public class Solution {
         }
 
         return (A.length == 0 ? 0 : before + 1);
-/*
-	//if return the result array.
-	return A.length == 0 ? [] : A.substring(0, before + 1);
-*/
     }
 }
