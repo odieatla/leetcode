@@ -36,3 +36,42 @@ public class Solution {
         return result;
     }
 }
+
+/*
+//another implementation, save recursive.
+
+public class Solution {
+    public boolean isSymmetric(TreeNode root) {
+        // Start typing your Java solution below
+        // DO NOT write main() function
+        
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        
+        inOrder(root, list);
+        
+        if(list.size() == 0) return true;
+        
+        if(list.size()%2 == 0) return false;
+        
+        for(int i = 0; i < list.size()/2 ; i++)
+        {
+            if(list.get(i) != list.get(list.size() - 1 - i))
+            {
+                return false;
+            }
+        }
+        
+        return true;
+        
+    }
+    
+    private void inOrder(TreeNode root, ArrayList<Integer> list)
+    {
+        if(root == null) return;
+        
+        inOrder(root.left, list);
+        list.add(root.val);
+        inOrder(root.right, list);
+    }
+}
+*/
