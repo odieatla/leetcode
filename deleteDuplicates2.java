@@ -27,7 +27,7 @@ public class Solution {
                 if(l.next.val == l.val)
                 {
                     dup = true;
-                    pre.next = null;
+                    pre.next = null; //important..
                 }
                 else
                 {
