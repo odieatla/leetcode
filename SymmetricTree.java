@@ -73,5 +73,35 @@ public class Solution {
         list.add(root.val);
         inOrder(root.right, list);
     }
+
+    **************** Iteration ****************
+    private void inOrder(TreeNode root, ArrayList<Integer> list)
+    {
+        Stack<TreeNode> s = new Stack<TreeNode>();
+        boolean done = false;
+        TreeNode cur = root;
+        
+        while(!done)
+        {
+            if(cur != null)
+            {
+                s.push(cur);
+                cur = cur.left;
+            }
+            else
+            {
+                if(s.empty())
+                {
+                    done = true;
+                }
+                else
+                {
+                    cur = s.pop();
+                    list.add(cur.val);
+                    cur = cur.right;
+                }
+            }
+        }
+    }
 }
 */
