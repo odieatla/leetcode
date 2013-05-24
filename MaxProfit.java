@@ -22,4 +22,31 @@ public class Solution {
 
         return maxp > 0 ? maxp : 0; //if less than 0, then same day buy and sell
     }
+
+    //better solution
+    public int maxProfit(int[] prices)
+    {
+        if(prices.length < 1)
+        {
+          return 0;
+        }
+
+        int buy = prices[0];
+        int maxp = 0;
+
+        for(int i = 0; i < prices.length; i++)
+        {
+            int cur = prices[i];
+            if(cur < buy)
+            {
+                buy = cur;
+            }
+            if(cur - buy > maxp)
+            {
+                maxp = cur - buy;
+            }
+        }
+
+        return maxp;
+    }
 }
