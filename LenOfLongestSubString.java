@@ -7,6 +7,13 @@
 
     * Assume all character are lower case letters.
 
+    * alg
+    ** two pointers for start and end(index in the loop), an array to store existing char
+    ** start and end both start at the beginning
+    ** move end pointer until hit a duplicate. For each processed char, store to the array.
+    ** now move start pointer until the duplicate. when processing, remove the flags from the array.
+    ** go back to 3 if haven't reach the end.
+
 */
 public class Solution {
     public int lengthOfLongestSubstring(String s) {
