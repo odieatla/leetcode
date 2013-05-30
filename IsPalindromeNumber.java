@@ -9,7 +9,7 @@ public class Solution {
 
         int div = 1;
 
-        while(x/div >= 10) //watch out 1001, 101
+        while(x/div >= 10) //watch out 1001, 101, cannot use multiple => overflow
         {
             div *= 10;
         }
